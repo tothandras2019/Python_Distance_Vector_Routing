@@ -1,0 +1,157 @@
+[
+    {
+        "node": "A",
+        "routing_table": [
+            {
+                "destination": "B",
+                "cross": "C",
+                "distance": 2
+            },
+            {
+                "destination": "C",
+                "cross": "C",
+                "distance": 1
+            },
+            {
+                "destination": "D",
+                "cross": "D",
+                "distance": 1
+            },
+            {
+                "destination": "E",
+                "cross": "E",
+                "distance": 4
+            },
+            {
+                "destination": "F",
+                "cross": "C",
+                "distance": 6
+            },
+            {
+                "destination": "G",
+                "cross": "C",
+                "distance": 2
+            }
+        ]
+    },
+    {
+        "node": "B",
+        "routing_table": [
+            {
+                "destination": "A",
+                "cross": "F",
+                "distance": 2
+            },
+            {
+                "destination": "C",
+                "cross": "F",
+                "distance": 2
+            },
+            {
+                "destination": "D",
+                "cross": "F",
+                "distance": 2
+            },
+            {
+                "destination": "E",
+                "cross": "F",
+                "distance": 2
+            },
+            {
+                "destination": "F",
+                "cross": "F",
+                "distance": 2
+            },
+            {
+                "destination": "G",
+                "cross": "F",
+                "distance": 2
+            }
+        ]
+    },
+    {
+        "node": "C",
+        "routing_table": [
+            {
+                "destination": "A",
+                "cross": "A",
+                "distance": 2
+            },
+            {
+                "destination": "B",
+                "cross": "F",
+                "distance": 3
+            },
+            {
+                "destination": "D",
+                "cross": "A",
+                "distance": 2
+            },
+            {
+                "destination": "E",
+                "cross": "F",
+                "distance": 3
+            },
+            {
+                "destination": "E",
+                "cross": "A",
+                "distance": 2
+            },
+            {
+                "destination": "F",
+                "cross": "F",
+                "distance": 3
+            },
+            {
+                "destination": "G",
+                "cross": "F",
+                "distance": 3
+            },
+            {
+                "destination": "G",
+                "cross": "F",
+                "distance": 3
+            }
+        ]
+    },
+    {
+        "node": "D",
+        "routing_table": [
+            {
+                "destination": "A",
+                "cross": "A",
+                "distance": 2
+            },
+            {
+                "destination": "B",
+                "cross": "F",
+                "distance": 3
+            },
+            {
+                "destination": "D",
+                "cross": "A",
+                "distance": 2
+            },
+            {
+                "destination": "E",
+                "cross": "F",
+                "distance": 3
+            },
+            {
+                "destination": "F",
+                "cross": "F",
+                "distance": 3
+            },
+            {
+                "destination": "G",
+                "cross": "F",
+                "distance": 3
+            },
+            {
+                "destination": "G",
+                "cross": "F",
+                "distance": 3
+            }
+        ]
+    }
+]

@@ -1,0 +1,111 @@
+$node-size: 50px;
+$dark-color: #0c476e;
+$light-color: #227fab;
+
+//RESET!!
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(214, 211, 211);
+}
+
+body{
+    position: relative;
+    cursor: pointer;
+    #root{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+}
+
+
+line{
+    stroke: $light-color;
+    stroke-width:2;
+    opacity: 0;
+
+    animation-name:appearLine;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes appearLine {
+    to{
+        opacity: 1;
+    }    
+}
+
+p{
+    cursor: grab;
+    // cursor: grabbing;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-color;
+    color: white;
+    font-size: 30px;    
+    width: $node-size;
+    height: $node-size;
+    border-radius: 50%;
+
+    &.p_increase{
+        animation-name:increaseSize;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+    
+    &.p_deincrease{
+        animation-name:deincreaseSize;
+        animation-duration: 0.8s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes increaseSize {
+        to{
+            background-color: $dark-color;
+            transform: scale(120%, 120%);
+            box-shadow: 5px 5px 10px black;
+        }    
+    }
+    
+    @keyframes deincreaseSize {
+        from{
+            background-color: $dark-color;
+            transform: scale(120%, 120%);
+            box-shadow: 5px 5px 10px black;
+        }
+        to{
+            background-color: $light-color;
+            transform: scale(100%, 100%);
+        }    
+    }
+}
+
+span{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: $dark-color;
+}
+
+.node_choose{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+

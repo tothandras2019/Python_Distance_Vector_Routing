@@ -1,0 +1,24 @@
+{
+    "start": ">>Start app:\npython App.py CMD message CMD destination",
+    "start_cmd": [
+        [
+            "Add message:",
+            "-s",
+            "your message"
+        ],
+        [
+            "Add destination:",
+            "-d",
+            "node: A - F"
+        ]
+    ],
+    "modify": ">> Modify route table:\npython App.py CMD node",
+    "modfy_cmd": [
+        [
+            "Modify route table:",
+            "-m",
+            "node: A - G",
+            "cost: number"
+        ]
+    ]
+}
