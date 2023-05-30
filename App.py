@@ -36,7 +36,7 @@ class MessageingApp:
     def create_base_index_page(self, data):
         script_data = f"<script> const enbeded_data = {data} </script>"
 
-        return f'<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="style.css"> <script defer src="script.js"></script> <title>Hello</title>  </head> <body><span>Ha nem tetszik az alakzat vonszold a pöttyöket odébb!</span> <div id="root"> </div> {script_data}</body> </html>'
+        return f'<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="style.css"> <script defer src="script.js"></script> <title>Spanning Tree</title>  </head> <body><span>Ha nem tetszik az alakzat vonszold a pöttyöket odébb!</span> <div id="root"> </div> {script_data}</body> </html>'
 
     def apply_states(self):
         while True:
