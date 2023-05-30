@@ -42,7 +42,7 @@ class MessageingApp:
         while True:
             if type(self).app_state == type(self).states["init"]:
                 self.load_graph()
-                print("----------GRAPH LOADED-----------")
+                
 
             if type(self).app_state == type(self).states["inputs"]:
                 print("----------MENU-----------")
@@ -147,6 +147,7 @@ class MessageingApp:
         self._graph =  self.file_processor.read_json(full_path)
 
         if self._graph:
+            print("----------GRAPH LOADED-----------")
             type(self).app_state = type(self).states["inputs"]
             pass
 

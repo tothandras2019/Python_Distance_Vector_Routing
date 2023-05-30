@@ -131,11 +131,7 @@ function mouseLeaveElement(ev) {
 }
 
 function draw_one_tree(key_coord_pair) {
-    //TODO: implement to choose!
-    //let choosen_key = "S";
-
     let nodeClassSet = new Set();
-
     let lineStringArray = [];
 
     const choosen_tree = Object.entries(enbeded_data).find(([key, tree_arr]) => key === choosen_key);
