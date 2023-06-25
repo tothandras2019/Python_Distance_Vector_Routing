@@ -1,7 +1,5 @@
 "use strict";
 
-//import span_tree from "./spanning_tree.json"
-
 const nodeCentralDiff = 25;
 
 let root = null;
@@ -179,19 +177,7 @@ function iterateNodeFiles() {
     });
     
     draw_one_tree(key_coord_pair);
-    
-    // region------RANDOM NODES----
-    
-        //const randomCoord = () => Math.floor(Math.random() * 680 + 100);
-        // Object.entries(data).forEach(([key, data], index) => {
-        //     let f_x = randomCoord();
-        //     let f_y = randomCoord();
-        //     key_coord_pair[key] = { x: f_x, y: f_y };
-        //     addNodeToPage(key, f_x, f_y, f_x, f_y);
-        // });
-        // draw_one_tree(key_coord_pair);
-    
-    // endregion
+
 }
  
 //----------VIEW ELEMENTS-----------------

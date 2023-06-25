@@ -147,14 +147,10 @@ class MessageingApp:
 
         if self._graph:
             print("----------GRAPH LOADED-----------")
-            print("Választható node-k listája:")
-            for node in self._graph:
+            print("Választható node-k listája: ", end="")
+            self.possible_nodes = [node for node in self._graph]
+            print(*self.possible_nodes)
 
-                print(node,end=" ")
-                self.possible_nodes.append(node)
-
-
-            print("\n")
             type(self).app_state = type(self).states["inputs"]
             pass
 

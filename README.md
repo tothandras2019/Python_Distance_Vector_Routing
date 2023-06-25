@@ -16,4 +16,4 @@ tábla frissítés.
 
 -------------------
 
-indítás: python App.py
+INDÍTÁS: python App.py
