@@ -203,7 +203,7 @@ function startNodeOption() {
     });
 
     return `<div class="node_choose">
-                <label for="pet-select">Node-k listája:</label>
+                <label for="pet-select">Kiinduló Node</label>
                 <select name="pets" id="pet-select">
                     <option value="">--Válassz!--</option>
                     ${optionsArray.join("")}

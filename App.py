@@ -20,14 +20,11 @@ class MessageingApp:
         self.gr = graph.Graph()
         self.help_user = None
         self._graph = None
+        self.possible_nodes = []
+
         self.file_processor = fileprocessor.FileProcessor()
 
         self.apply_states()
-
-        # BACKUP:
-        # args = sys.argv
-        # self.start_user_interface(args)
-        # self.nodeManager = node_manager.NodeManager()
 
     def open_page(self):
         path = os.getcwd()
@@ -46,24 +43,27 @@ class MessageingApp:
 
             if type(self).app_state == type(self).states["inputs"]:
                 print("----------MENU-----------")
-                start_node = input('(KILÉPÉS: "q", MÓDOSÍTÁS: m, FESZÍTŐFA - Böngésző nézet!!!: "f") \n Add meg betuvel a kiindulasi pontot.\n>> ') 
-                start_node = start_node.upper()
+                input_option = None
+                end_node = None
 
-                if start_node == "Q":
+                input_option = input('(KILÉPÉS: "q", MÓDOSÍTÁS: m, FESZÍTŐFA - Böngésző nézet!!!: "f") \n Add meg betuvel a kiindulasi pontot.\n>> ') 
+                input_option = input_option.upper()
+
+                if input_option == "Q":
                     type(self).app_state = type(self).states["quit"]
                     break
 
-                if start_node == "F":
+                if input_option == "F":
                     type(self).app_state = type(self).states["draw"]
                     continue
-                if start_node == "M":
+                if input_option == "M":
                     type(self).app_state = type(self).states["modify"]
                     continue
 
                 end_node = input("Add meg betuvel a cel pontot: ")
                 end_node = end_node.upper()
 
-                self.gr.print_result(self.gr.dijkstra_II(self._graph, start_node), start_node, end_node)
+                self.gr.print_result(self.gr.dijkstra_II(self._graph, input_option), input_option, end_node)
 
             if type(self).app_state == type(self).states["draw"]:
                 print("----------DRAW-----------")
@@ -143,11 +143,18 @@ class MessageingApp:
         file = "graph.json"
         full_path = os.path.join(path, "network", file)
 
-        #self._graph = self.read_json(full_path)
         self._graph =  self.file_processor.read_json(full_path)
 
         if self._graph:
             print("----------GRAPH LOADED-----------")
+            print("Választható node-k listája:")
+            for node in self._graph:
+
+                print(node,end=" ")
+                self.possible_nodes.append(node)
+
+
+            print("\n")
             type(self).app_state = type(self).states["inputs"]
             pass
 
